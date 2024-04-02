@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Squares Inside Rectangle - Bunker One</title> <!-- Name: Bunker One -->
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+     h1 {
+        text-align: center;
+    }
+
+    /* CSS styling for the page */
+    body {
+        background-color: lightblue; /* Set background color to light blue */
+
+
+    /* CSS styling for the rectangle */
+   .rectangle {
+        width: 220px;
+        height: 100px;
+        background-color: rgba(0, 0, 200, 0.1);
+        border: 1px solid black;
+        position: relative;
+        margin: 30px;
+        display: inline-block; /* Change from float: left to inline-block */
+        vertical-align: top; /* Align the rectangles to the top */
+        
+
+    /* CSS styling for the label */
+    .label {
+        position: absolute; /* Position the label absolutely */
+        top: 5px; /* Place the label 5px from the top */
+        left: 50%; /* Align the label horizontally */
+        transform: translateX(-50%); /* Center the label horizontally */
+        font-size: 14px; /* Font size of the label */
+    }
+
+    /* CSS styling for the count */
+    .count {
+        position: absolute; /* Position the count absolutely */
+        left: 0; /* Align the count to the left */
+        width: 100%; /* Make the count area full width */
+        text-align: center; /* Center the text horizontally */
+        font-size: 12px; /* Font size of the count */
+    }
+
+    /* CSS styling for the red count */
+    .red-count {
+        color: red; /* Red color for the count */
+        top: calc(100% + 10px); /* Place below the rectangle with some spacing */
+    }
+
+    /* CSS styling for the green count */
+    .green-count {
+        color: green; /* Green color for the count */
+        top: calc(100% + 25px); /* Place below the red count with additional spacing */
+    }
+
+    /* CSS styling for the black count */
+    .black-count {
+        color: black; /* Black color for the count */
+        top: calc(100% + 40px); /* Place below the green count with additional spacing */
+    }
+
+    /* CSS styling for the laptop icon */
+    .laptop-icon {
+        font-size: 16px; /* Adjust the size of the laptop icon */
+        color: white; /* Set the default color of the laptop icon to white */
+        position: absolute; /* Position the laptop icon absolutely */
+        cursor: pointer; /* Add cursor pointer on hover */
+    }
+
+    /* CSS styling for red laptop */
+    .red {
+        color: red !important; /* Set red color for laptop */
+    }
+
+    /* CSS styling for green laptop */
+    .green {
+        color: green !important; /* Set green color for laptop */
+    }
+
+    /* CSS styling for black laptop */
+    .black {
+        color: black !important; /* Set black color for laptop */
+    }
+</style>
+</head>
+
+<h1>BUNKER MANAGEMENT </h1>
+<body>
+
+<!-- HTML code to generate similar rectangles with laptop icons -->
+<!-- Repeat the below code block 5 times for 5 rectangles -->
+
+<!-- Bunker One -->
+<div class="rectangle" id="bunkerOne">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 1</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerOneRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerOneGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerOneBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Two -->
+<div class="rectangle" id="bunkerTwo">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 2</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwoRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwoGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwoBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Three -->
+<div class="rectangle" id="bunkerThree" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 3</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerThreeRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerThreeGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerThreeBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Four -->
+<div class="rectangle" id="bunkerFour" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 4</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerFourRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerFourGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerFourBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Five -->
+<div class="rectangle" id="bunkerFive" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 5</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerFiveRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerFiveGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerFiveBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Six -->
+<div class="rectangle" id="bunkerSix" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 6</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerSixRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerSixGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerSixBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Seven -->
+<div class="rectangle" id="bunkerSeven" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 7</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerSevenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerSevenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerSevenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Eight -->
+<div class="rectangle" id="bunkerEight" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 8</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerEightRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerEightGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerEightBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Nine -->
+<div class="rectangle" id="bunkerNine" style="clear: both; margin-top: 50px;">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 9</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerNineRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerNineGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerNineBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Ten -->
+<div class="rectangle" id="bunkerTen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 10</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Eleven -->
+
+<div class="rectangle" id="bunkerEleven">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 11</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerElevenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerElevenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerElevenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Twelve -->
+<div class="rectangle" id="bunkerTwelve">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 12</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwelveRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwelveGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwelveBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Thirteen -->
+<div class="rectangle" id="bunkerThirteen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 13</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerThirteenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerThirteenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerThirteenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Fourteen -->
+<div class="rectangle" id="bunkerFourteen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 14</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerFourteenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerFourteenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerFourteenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Fifteen -->
+<div class="rectangle" id="bunkerFifteen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 15</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerFifteenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerFifteenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerFifteenBlack">No Workstation: 0</div>
+</div>
+
+<div class="rectangle" id="bunkerSixteen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 16</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerSixteenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerSixteenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerSixteenBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Seventeen -->
+<div class="rectangle" id="bunkerSeventeen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 17</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerSeventeenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerSeventeenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerSeventeenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Eighteen -->
+<div class="rectangle" id="bunkerEighteen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 18</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerEighteenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerEighteenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerEighteenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Nineteen -->
+<div class="rectangle" id="bunkerNineteen">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 19</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerNineteenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerNineteenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerNineteenBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Twenty -->
+<div class="rectangle" id="bunkerTwenty">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 20</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Twenty-One -->
+<div class="rectangle" id="bunkerTwentyOne">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 21</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyOneRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyOneGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyOneBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Twenty-Two -->
+<div class="rectangle" id="bunkerTwentyTwo">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 22</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyTwoRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyTwoGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyTwoBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Twenty-Three -->
+<div class="rectangle" id="bunkerTwentyThree">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 23</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyThreeRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyThreeGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyThreeBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Twenty-Four -->
+<div class="rectangle" id="bunkerTwentyFour">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 24</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyFourRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyFourGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyFourBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Twenty-Five -->
+<div class="rectangle" id="bunkerTwentyFive">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 25</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyFiveRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyFiveGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyFiveBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Twenty-Six -->
+<div class="rectangle" id="bunkerTwentySix">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 26</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentySixRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentySixGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentySixBlack">No Workstation: 0</div>
+</div>
+
+
+<!-- Bunker Twenty-Seven -->
+<div class="rectangle" id="bunkerTwentySeven">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 27</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentySevenRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentySevenGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentySevenBlack">No Workstation: 0</div>
+</div>
+
+<!-- Bunker Twenty-Eight -->
+<div class="rectangle" id="bunkerTwentyEight">
+    <!-- Label for the rectangle -->
+    <div class="label">Bunker 28</div>
+    
+    <!-- Laptop icons for squares -->
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 160px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 40px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 70px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 100px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 160px;" onclick="markStatus(this)"></i>
+    
+    <!-- Additional laptop icon positioned closer to the middle between the top and bottom rows -->
+    <i class="fas fa-desktop laptop-icon" style="top: 40px; left: 190px;" onclick="markStatus(this)"></i>
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerTwentyEightRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerTwentyEightGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerTwentyEightBlack">No Workstation: 0</div>
+</div>
+
+
+
+<script>
+    function markStatus(laptop) {
+        var bunker = laptop.closest('.rectangle'); // Find the parent rectangle (bunker) of the clicked laptop
+        
+        if (laptop.classList.contains("red")) {
+            laptop.classList.remove("red");
+            laptop.classList.add("green");
+        } else if (laptop.classList.contains("green")) {
+            laptop.classList.remove("green");
+            laptop.classList.add("black");
+        } else if (laptop.classList.contains("black")) {
+            laptop.classList.remove("black");
+        } else {
+            laptop.classList.add("red");
+        }
+        
+        updateCounts(bunker); // Update counts for the corresponding bunker after marking status
+    }
+    
+    function updateCounts(bunker) {
+        bunker.querySelector('.red-count').textContent = "Faulty Workstation: " + bunker.querySelectorAll('.laptop-icon.red').length;
+        bunker.querySelector('.green-count').textContent = "Working Workstation: " + bunker.querySelectorAll('.laptop-icon.green').length;
+        bunker.querySelector('.black-count').textContent = "No Workstation: " + bunker.querySelectorAll('.laptop-icon.black').length;
+}
+
+document.getElementById('totalRedCount').textContent = totalRed;
+        document.getElementById('totalGreenCount').textContent = totalGreen;
+        document.getElementById('totalPCCount').textContent = totalPCs;
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
