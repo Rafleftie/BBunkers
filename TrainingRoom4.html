@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Squares Inside Rectangle - Bunker One</title> <!-- Name: Bunker One -->
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+     h1 {
+        text-align: center; }
+
+
+
+
+    
+
+
+    /* CSS styling for the page */
+    body {
+        background-color: lightblue; /* Set background color to light blue */
+
+
+    /* CSS styling for the rectangle */
+
+   .rectangle {
+        width: 300px;
+        height: 230px;
+        background-color: rgba(0, 0, 200, 0.1);
+        border: 1px solid black;
+        position: relative;
+        margin: 100px;
+        display: inline-block; /* Change from float: left to inline-block */
+        vertical-align: top; /* Align the rectangles to the top */
+        
+
+    /* CSS styling for the label */
+    .label {
+        position: absolute; /* Position the label absolutely */
+        top: 5px; /* Place the label 5px from the top */
+        left: 50%; /* Align the label horizontally */
+        transform: translateX(-50%); /* Center the label horizontally */
+        font-size: 14px; /* Font size of the label */
+    }
+
+    /* CSS styling for the count */
+    .count {
+        position: absolute; /* Position the count absolutely */
+        left: 0; /* Align the count to the left */
+        width: 100%; /* Make the count area full width */
+        text-align: center; /* Center the text horizontally */
+        font-size: 12px; /* Font size of the count */
+    }
+
+    /* CSS styling for the red count */
+    .red-count {
+        color: red; /* Red color for the count */
+        top: calc(100% + 10px); /* Place below the rectangle with some spacing */
+    }
+
+    /* CSS styling for the green count */
+    .green-count {
+        color: green; /* Green color for the count */
+        top: calc(100% + 25px); /* Place below the red count with additional spacing */
+    }
+
+    /* CSS styling for the black count */
+    .black-count {
+        color: black; /* Black color for the count */
+        top: calc(100% + 40px); /* Place below the green count with additional spacing */
+    }
+
+    /* CSS styling for the laptop icon */
+    .laptop-icon {
+        font-size: 25px; /* Adjust the size of the laptop icon */
+        color: white; /* Set the default color of the laptop icon to white */
+        position: absolute; /* Position the laptop icon absolutely */
+        cursor: pointer; /* Add cursor pointer on hover */
+    }
+
+    /* CSS styling for red laptop */
+    .red {
+        color: red !important; /* Set red color for laptop */
+    }
+
+    /* CSS styling for green laptop */
+    .green {
+        color: green !important; /* Set green color for laptop */
+    }
+
+    /* CSS styling for black laptop */
+    .black {
+        color: black !important; /* Set black color for laptop */
+    }
+</style>
+</head>
+<h1>BUNKER MANAGEMENT </h1>
+<h2>Floor</h2>
+
+<body>
+
+
+
+
+<!-- HTML code to generate similar rectangles with laptop icons -->
+<!-- Repeat the below code block 5 times for 5 rectangles -->
+
+<!-- Bunker One -->
+<div class="rectangle" id="bunkerOne">
+    <!-- Label for the rectangle -->
+    <div class="label">Training Room 4</div>
+    
+    <!-- Laptop icons for squares -->
+    
+     <!-- Laptop icons for squares -->
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 50px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 90px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 170px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 20px; left: 210px;" onclick="markStatus(this)"></i>
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 50px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 90px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 170px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 60px; left: 210px;" onclick="markStatus(this)"></i>
+    
+    <i class="fas fa-desktop laptop-icon" style="top: 100px; left: 10px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 100px; left: 50px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 100px; left: 90px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 100px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 100px; left: 170px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 100px; left: 210px;" onclick="markStatus(this)"></i>
+
+     <i class="fas fa-desktop laptop-icon" style="top: 140px; left: 10px;" onclick="markStatus(this)"></i>
+     <i class="fas fa-desktop laptop-icon" style="top: 140px; left: 50px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 140px; left: 90px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 140px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 140px; left: 170px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 140px; left: 210px;" onclick="markStatus(this)"></i>
+
+
+    <i class="fas fa-desktop laptop-icon" style="top: 180px; left: 10px;" onclick="markStatus(this)"></i>
+     <i class="fas fa-desktop laptop-icon" style="top: 180px; left: 50px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 180px; left: 90px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 180px; left: 130px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 180px; left: 170px;" onclick="markStatus(this)"></i>
+    <i class="fas fa-desktop laptop-icon" style="top: 180px; left: 210px;" onclick="markStatus(this)"></i>
+
+
+    
+    
+    <!-- Count for Faulty Workstation -->
+    <div class="count red-count" id="bunkerOneRed">Faulty Workstation: 0</div>
+    <!-- Count for Working Workstation -->
+    <div class="count green-count" id="bunkerOneGreen">Working Workstation: 0</div>
+    <!-- Count for black (No Workstation) laptops -->
+    <div class="count black-count" id="bunkerOneBlack">No Workstation: 0</div>
+
+    
+
+</div>
+
+
+
+<script>
+
+    function markStatus(laptop) {
+        var bunker = laptop.closest('.rectangle'); // Find the parent rectangle (bunker) of the clicked laptop
+        
+        if (laptop.classList.contains("red")) {
+            laptop.classList.remove("red");
+            laptop.classList.add("green");
+        } else if (laptop.classList.contains("green")) {
+            laptop.classList.remove("green");
+            laptop.classList.add("black");
+        } else if (laptop.classList.contains("black")) {
+            laptop.classList.remove("black");
+        } else {
+            laptop.classList.add("red");
+        }
+        
+        updateCounts(bunker); // Update counts for the corresponding bunker after marking status
+    }
+    
+    function updateCounts(bunker) {
+        bunker.querySelector('.red-count').textContent = "Faulty Workstation: " + bunker.querySelectorAll('.laptop-icon.red').length;
+        bunker.querySelector('.green-count').textContent = "Working Workstation: " + bunker.querySelectorAll('.laptop-icon.green').length;
+        bunker.querySelector('.black-count').textContent = "No Workstation: " + bunker.querySelectorAll('.laptop-icon.black').length;
+}
+
+function updateTotalCounts() {
+        var allBunkers = document.querySelectorAll('.rectangle'); // Get all bunkers
+        
+        var totalRed = 0;
+        var totalGreen = 0;
+        var totalBlack = 0;
+        
+        // Loop through each bunker to calculate total counts
+        allBunkers.forEach(function(bunker) {
+            totalRed += bunker.querySelectorAll('.laptop-icon.red').length;
+            totalGreen += bunker.querySelectorAll('.laptop-icon.green').length;
+            totalBlack += bunker.querySelectorAll('.laptop-icon.black').length;
+        });
+        
+        // Update the total counts in a div or span element
+        var totalDiv = document.getElementById('totalCounts');
+        totalDiv.textContent = "Total Counts - Faulty: " + totalRed + ", Working: " + totalGreen + ", No Workstation: " + totalBlack;
+
+         }
+
+
+</script>
+
+
+</body>
+
+
+</html>

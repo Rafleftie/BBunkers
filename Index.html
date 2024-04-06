@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms Layout</title>
+    <style>
+        /* Centering the content vertically and horizontally */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        /* Styling for the container divs */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        /* Styling for the rectangle buttons */
+        .rectangle {
+            width: 200px;
+            height: 80px;
+            background-color: #4CAF50; /* Default color (fallback) */
+            background-image: linear-gradient(to right, #4EB7E9, #57C4ED); /* Gradient light blue color */
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        /* Hover effect */
+        .rectangle:hover {
+            background-image: linear-gradient(to right, #3A9FCF, #47ADE3); /* Darker gradient on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Floors</h2>
+        <div class="rectangle" onclick="navigateToPage('FloorOne.html')">Floor One</div>
+        <div class="rectangle" onclick="navigateToPage('FloorTwo.html')">Floor Two</div>
+        <div class="rectangle" onclick="navigateToPage('FloorThree.html')">Floor Three</div>
+        <div class="rectangle" onclick="navigateToPage('FloorFour.html')">Floor Four</div>
+        <div class="rectangle" onclick="navigateToPage('FloorFive.html')">Floor Five</div>
+    </div>
+
+    <div class="container">
+        <h2>Training Rooms</h2>
+        <div class="rectangle" onclick="navigateToPage('TrainingRoom1.html')">Training Room 1</div>
+        <div class="rectangle" onclick="navigateToPage('TrainingRoom2.html')">Training Room 2</div>
+        <div class="rectangle" onclick="navigateToPage('TrainingRoom3.html')">Training Room 3</div>
+        <div class="rectangle" onclick="navigateToPage('TrainingRoom4.html')">Training Room 4</div>
+        <div class="rectangle" onclick="navigateToPage('TrainingRoom5.html')">Training Room 5</div>
+    </div>
+
+    <script>
+        function navigateToPage(pageURL) {
+            window.location.href = pageURL; // Redirect to the specified page URL
+        }
+    </script>
+</body>
+</html>
